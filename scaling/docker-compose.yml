@@ -10,8 +10,8 @@ services:
    deploy:
      replicas: 20
      update_config:
-       parallelism: 5
-       delay: 10s
+       parallelism: 10
+       delay: 0s
      restart_policy:
        condition: on-failure
        max_attempts: 3
@@ -22,7 +22,7 @@ services:
   proxy:
     image: dockercloud/haproxy
     depends_on:
-      - sudo-app
+      - sudoapp
     environment:
       - BALANCE=leastconn
     volumes:

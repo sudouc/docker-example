@@ -19,7 +19,7 @@ http.createServer(function (req, res) {
 
 ```
 
-Tag new image
+Tag new image with the version – in this case `v2`
 
 ```
 docker build -t sudoapp:v2 .
